@@ -27,9 +27,6 @@ def converter():
             'convert_option': 'convert_only'
         }
 
-        # Simulate processing delay (remove this line in production)
-        # time.sleep(3)
-
         response = requests.post(url=url, headers=headers, json=data)
         if 'Url not found in post!' in response.text:
             result = 'URL not found!'
