@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 import json
-import time
+import os
 
 app = Flask(__name__)
 
@@ -15,7 +15,7 @@ def converter():
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
             'Origin': 'https://ek.affiliaters.in',
             'Referer': 'https://ek.affiliaters.in/',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UzNGU3N2NkMWUyODJlMmY5NTRjNzIiLCJlYXJua2FybyI6IjkzMjA4MiIsImlhdCI6MTY5MTY0MTEyMX0.iOUAv99_c27iUPZ_K1sVrMZ3Mg-ch_LQ9Npoc9YY0i0'
+            'Authorization': f'{os.environ.get("auth_token")}'
         }
 
         link = request.form['link']
