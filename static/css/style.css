@@ -18,11 +18,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: Arial, sans-serif;
-    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    /* overflow-y: scroll; */
+    position: relative;
 }
 
 .card {
@@ -163,9 +166,9 @@ button.copy:hover {
     width: 100%;
     align-self: center;
 }
-  
+
 .footer a {
     color: white;
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.9em;
 }
