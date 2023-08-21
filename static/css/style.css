@@ -160,7 +160,7 @@ button.copy:hover {
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: absolute;
+    position: relative;
     bottom: 10px;
     left: 0;
     width: 100%;
